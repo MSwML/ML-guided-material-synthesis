@@ -7,6 +7,7 @@ Nanyang Technological University.
 ### Table of Contents
 0. [Introduction](#introduction)
 0. [Citation](#citation)
+0. [Environment setup](#environment-setup)
 0. [Code](#code)
 
 
@@ -30,20 +31,30 @@ If you use these models in your research, please cite:
 		year = {2019}
 	}
 
-### Code
+### Environment Setup
 
-0. These models are converted from our own implementation to a recent version of Caffe (2016/2/3, b590f1d). The numerical results using this code are as in the tables below.
-0. These models are for the usage of testing or fine-tuning.
-0. These models were **not** trained using this version of Caffe.
-0. If you want to train these models using this version of Caffe without modifications, please notice that:
-	- GPU memory might be insufficient for extremely deep models.
-	- Changes of mini-batch size should impact accuracy (we use a mini-batch of 256 images on 8 GPUs, that is, 32 images per GPU).
-	- Implementation of data augmentation might be different (see our paper about the data augmentation we used).
-	- We randomly shuffle data at the beginning of every epoch.
-	- There might be some other untested issues.
-0. In our BN layers, the provided mean and variance are strictly computed using average (**not** moving average) on a sufficiently large training batch after the training procedure. The numerical results are very stable (variation of val error < 0.1%). Using moving average might lead to different results. 
-0. In the BN paper, the BN layer learns gamma/beta. To implement BN in this version of Caffe, we use its provided "batch_norm_layer" (which has no gamma/beta learned) followed by "scale_layer" (which learns gamma/beta).
-0. We use Caffe's implementation of SGD with momentum: v := momentum\*v + lr\*g. **If you want to port these models to other libraries (e.g., Torch, CNTK), please pay careful attention to the possibly different implementation of SGD with momentum**: v := momentum\*v + (1-momentum)\*lr\*g, which changes the effective learning rates.
+0. python environment setup:
+	```
+	python 3.6.6
+	jupyter==1.0.0
+	matplotlib==2.2.3
+	numpy==1.15.1
+	pandas==0.22.0
+	scikit-learn==0.20.3
+	scipy==1.1.0
+	seaborn==0.9.0
+	shap==0.24.0
+	xgboost==0.80
+	```	
+
+0. If the above installation of the above python packages fail, check out your installation of the following packages in Ubuntu or other Linux-based systems may help:
+	```
+	font-manager
+	g++
+	gcc
+	python3-dev
+	```	
+    Or, upgrade your pip.	
 
 	
 ### Models
