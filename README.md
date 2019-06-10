@@ -1,6 +1,6 @@
 # ML-guided-material-synthesis
 
-By [Bijun Tang](https://scholar.google.com.sg/citations?user=qwXbP28AAAAJ&hl=en), Yuhao Lu, Jiadong Zhou, Han Wang, Prafful Golani, Manzhang Xu, Quan Xu, [Cuntai Guan](http://www.ntu.edu.sg/home/ctguan/), [Zheng Liu](http://www.ntu.edu.sg/home/z.liu/)
+By [Bijun Tang](https://scholar.google.com.sg/citations?user=qwXbP28AAAAJ&hl=en), Yuhao Lu, [Jiadong Zhou](https://scholar.google.com.sg/citations?user=tmVOLIcAAAAJ&hl=en), Han Wang, Prafful Golani, Manzhang Xu, Quan Xu, [Cuntai Guan](http://www.ntu.edu.sg/home/ctguan/), [Zheng Liu](http://www.ntu.edu.sg/home/z.liu/)
 
 Nanyang Technological University.
 
