@@ -47,7 +47,7 @@ If you use these models in your research, please cite:
 	xgboost==0.80
 	```	
 
-0. If the above installation of the above python packages fail, check out your installation of the following packages in Ubuntu or other Linux-based systems may help:
+0. In case of errors during setup, check out your installation of the following packages in Ubuntu or other Linux-based systems may help:
 	```
 	font-manager
 	g++
