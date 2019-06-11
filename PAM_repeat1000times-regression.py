@@ -74,7 +74,7 @@ all_ind_wo_max.remove(0)
 
 
 # PAM guided synthesis
-def PAM_regression(save_csv= False, verbose=False, to_break=True, title='PAM_results_regression',batch=1):
+def PAM_regression(save_csv= False, verbose=False, to_break=True, title='cqd_PAM_',batch=1):
 
     ## start PAM guided synthesis...
     init_time = time.time()
@@ -190,19 +190,23 @@ def PAM_regression(save_csv= False, verbose=False, to_break=True, title='PAM_res
 outer_loop = 10
 inner_loop = 100
 
+print('start PAM for ',str(outer_loop*inner_loop),' times...')
 # save the results some repetitions for backup
 for j in range(0,outer_loop):
 
-    PAM_results = np.zeros((inner_loop,9))
+    #PAM_results = np.zeros((inner_loop,9))
+    init_time = time.time()
+    res_arr = []
 
     for i in range(0,inner_loop): 
 
         loop_count = j*inner_loop + i        
-        PAM_results[i,:] = np.array(PAM_regression(save_csv= True, verbose=True, title='cqd_PAM_'+str(loop_count)+'th_loop_'))
-        print(str(loop_count),' -> ',str(PAM_results[i,0]),'  time=',PAM_results[i,8])
+        result = PAM_regression(save_csv= False, verbose=False, to_break = True, title='cqd_PAM_'+str(loop_count)+'th_loop_')
+        res_arr.append(result)
+        print(str(loop_count),' -> ',str(result[0]),'  time=',result[len(result)-1])
    
 
-    PAM_df = pd.DataFrame(data=PAM_results, columns=['file-name','num_experiments','mean_y_wo_init','std_y_wo_init','mean_y_w_init','std_y_w_init','mean_y_only_init','std_y_only_init', 'run_time'])
+    PAM_df = pd.DataFrame(data=res_arr, columns=['file-name','num_experiments','mean_y_wo_init','std_y_wo_init','mean_y_w_init','std_y_w_init','mean_y_only_init','std_y_only_init', 'run_time'])
     saved_path = data_handler.save_csv(PAM_df,title='cqd_PAM_'+str(inner_loop)+'times_')
-    print('total = ',str((np.sum(PAM_results[:,8])/60)),'  hrs  >>-------saved')
+    print('total = ',str((time.time()-init_time)/3600),'  hrs  >>-------saved')
     

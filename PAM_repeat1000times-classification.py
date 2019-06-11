@@ -28,7 +28,6 @@ def test(clf, X_test,y_test):
     fn = 0
     fp = 0
     if(len(c_mat)==1):# all correctly predicted as one class
-        print(c_mat)
         best_pos_ind = -1
         if(y_test[0]==0): # all predicted as negative class
             tpr_ts = float('nan')
@@ -208,18 +207,22 @@ def PAM_classfication(verbose = False, save_csv = False, to_break=True, title = 
 outer_loop = 10
 inner_loop = 100
 
+print('start PAM for ',str(outer_loop*inner_loop),' times...')
 for j in range(0,outer_loop):
 
-    PAM_results = np.zeros((inner_loop,11))
+    #PAM_results = np.zeros((inner_loop,11))
+    init_time = time.time()
+    res_arr = []
 
     for i in range(0,inner_loop):
         loop_count = j*inner_loop + i      
 
-        PAM_results[i,:] = np.array(PAM_classfication(verbose = True, save_csv = True, to_break=True,title = 'mos2_PAM_'+str(loop_count)+'th_loop'))
-        print(str(loop_count),' -> ',str(PAM_results[i,0]),'  time=',PAM_results[i,10])
+        result = PAM_classfication(verbose = False, save_csv = False, to_break=True,title = 'mos2_PAM_'+str(loop_count)+'th_loop')
+        res_arr.append(result)
+        print(str(loop_count),' -> ',str(result[0]),'  time=',result[len(result)-1])
 
-    PAM_df = pd.DataFrame(data= PAM_results,columns=['file-name','Nc','sample_size','acc_ts','tpr_ts','tnr_ts','best_prob','pos_tr','type1_err','type2_err','run_time'])
-    data_handler.save_csv(PAM_df,title='mos2_PAM_'+str(inner_loop)+'times_')
-    print('total = ',str((np.sum(PAM_results[:,10])/60)),'  hrs  >>-------saved')
+    PAM_df = pd.DataFrame(data= res_arr,columns=['file-name','Nc','sample_size','acc_ts','tpr_ts','tnr_ts','best_prob','pos_tr','type1_err','type2_err','run_time'])
+    saved_path = data_handler.save_csv(PAM_df,title='mos2_PAM_'+str(inner_loop)+'times_')
+    print('total = ',str((time.time()-init_time)/3600),'  hrs  >>-------saved')
 
 

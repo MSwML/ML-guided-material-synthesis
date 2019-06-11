@@ -1,2 +1,0 @@
-file-name,Nc,sample_size,acc_ts,tpr_ts,tnr_ts,best_prob,pos_tr,type1_err,type2_err
-n,186,186.0,0.7982456140350878,0.0,1.0,0.4694325625896454,160.0,0.1329479768786127,0.14953271028037382

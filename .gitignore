@@ -1,6 +1,7 @@
-# Results
-#results/*
-#scripts/*
+# Results and Scripts
+results/*
+scripts/*
+*.output
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
