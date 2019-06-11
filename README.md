@@ -66,7 +66,7 @@ If you use these models in your research, please cite:
 ### Code
 0. Code structure:
 	- **scripts** 
-		-- run_ipynb.sh `: script to run all *.ipynb`
+		- run_ipynb.sh `: script to run all *.ipynb`
 	- **results** `: folder to store all results and generated figures`
 	- **utils** `: supporting functions`
 	- **data** `: download data before running code (see [Data](#code))`
@@ -77,8 +77,8 @@ If you use these models in your research, please cite:
 	- best_model_interpretation-\*\.ipynb `: to extract feature attribution values; and predict on generated input`	
 	
 	
-**Note**
-*File names end with `'-classification'` are for classification or MoS2 dataset, while those end with `'-regression'` are for regression or CQD dataset.*
+**Note:**
+*File names end with '-classification' are for classification or MoS2 dataset, while those end with '-regression' are for regression or CQD dataset.*
 
 
 0. To run 
@@ -92,4 +92,3 @@ If you use these models in your research, please cite:
 	
 	![Training curves](https://cloud.githubusercontent.com/assets/11435359/13046277/e904c04c-d412-11e5-9260-efc5b8301e2f.jpg)
 	
-@ Yuhao Lu 2019
