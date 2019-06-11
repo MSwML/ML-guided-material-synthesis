@@ -69,13 +69,13 @@ If you use these models in your research, please cite:
 		- run_ipynb.sh `: script to run all *.ipynb. Setup up your directory in file.`
 	- **results** `: folder to store all results and generated figures`
 	- **utils** `: supporting functions`
-	- **data** `: download data before running code (see [Data](#code))`
+	- **data** `: download data before running code `(see [Data](#code))
 	- PAM_repeat1000times-\*\.py `: to repeat 1000 times of PAM with randomly selected initial training sets. Please take note that it takes considerable computational time to finish running all 1000 times. E.g it may take around 1 hr to run 1 time of PAM for classification.`
-	- PAM_guidedSynthesis-\*\.ipynb `: to run 1 run of PAM, and plot the figures`
+	- PAM_guidedSynthesis-\*\.ipynb `: to run 1 time of PAM and plot the figures`
 	- model_selection-\*\.ipynb `: to select best model with 10 repetitions of 10 X 10 cross validation; plus result interpretation`
 	- data_overview.ipynb `: to plot feature correlation of dataset, and compute other descriptive statistics`
-	- best_model_interpretation-\*\.ipynb `: to extract feature attribution values; and predict on generated input`	
+	- best_model_interpretation-\*\.ipynb `: to extract feature attribution values; and predict the generated input`	
 	
-	
+
 **Note:**
 *File names end with '-classification' are for classification or MoS2 dataset, while those end with '-regression' are for regression or CQD dataset.*
