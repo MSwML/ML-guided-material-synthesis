@@ -79,16 +79,3 @@ If you use these models in your research, please cite:
 	
 **Note:**
 *File names end with '-classification' are for classification or MoS2 dataset, while those end with '-regression' are for regression or CQD dataset.*
-
-
-0. To run 
-
-	model|top-1|top-5
-	:---:|:---:|:---:
-	[VGG-16](http://www.vlfeat.org/matconvnet/pretrained/)|[28.5%](http://www.vlfeat.org/matconvnet/pretrained/)|[9.9%](http://www.vlfeat.org/matconvnet/pretrained/)
-	ResNet-50|24.7%|7.8%
-	ResNet-101|23.6%|7.1%
-	ResNet-152|23.0%|6.7%
-	
-	![Training curves](https://cloud.githubusercontent.com/assets/11435359/13046277/e904c04c-d412-11e5-9260-efc5b8301e2f.jpg)
-	
