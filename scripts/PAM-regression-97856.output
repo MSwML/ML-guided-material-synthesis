@@ -1,0 +1,526 @@
+loading CQD dataset...
+batch_size = 1   -> [300]
+-7.732702638952749
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0.2, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+1 -> 1 , best_next_ind= 300  best_Y_true= 0.128000  train_max= 0.497000  r2= -0.04254128352753028
+batch_size = 1   -> [10]
+-2.882401401186973
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.7,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=300,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+2 -> 2 , best_next_ind= 10  best_Y_true= 0.504000  train_max= 0.497000  r2= 0.4496909631433228
+batch_size = 1   -> [147]
+-1.2773317783585079
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+3 -> 3 , best_next_ind= 147  best_Y_true= 0.342000  train_max= 0.504000  r2= 0.49429920477816225
+batch_size = 1   -> [7]
+-1.584635077253459
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.9,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=300,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+4 -> 4 , best_next_ind= 7  best_Y_true= 0.512000  train_max= 0.504000  r2= 0.4055347241155778
+batch_size = 1   -> [74]
+-0.030303173033038987
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+5 -> 5 , best_next_ind= 74  best_Y_true= 0.441000  train_max= 0.512000  r2= 0.4036213380740076
+batch_size = 1   -> [8]
+-1.2147028104853865
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=300,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+6 -> 6 , best_next_ind= 8  best_Y_true= 0.511000  train_max= 0.512000  r2= 0.40309406612160903
+batch_size = 1   -> [91]
+-0.937790948620045
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.9,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+7 -> 7 , best_next_ind= 91  best_Y_true= 0.412000  train_max= 0.512000  r2= 0.31237215864459134
+batch_size = 1   -> [388]
+-7.8455104729089165
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.7,
+       colsample_bytree=1, gamma=0.2, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+8 -> 8 , best_next_ind= 388  best_Y_true= 0.020000  train_max= 0.512000  r2= 0.20162390954938947
+batch_size = 1   -> [57]
+-2.100098972742953
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.7,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+9 -> 9 , best_next_ind= 57  best_Y_true= 0.455000  train_max= 0.512000  r2= 0.4140166933635231
+batch_size = 1   -> [48]
+-0.7311874009193873
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+10 -> 10 , best_next_ind= 48  best_Y_true= 0.466000  train_max= 0.512000  r2= 0.5359853099661651
+batch_size = 1   -> [120]
+0.0723705960883023
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.7,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+11 -> 11 , best_next_ind= 120  best_Y_true= 0.377000  train_max= 0.512000  r2= 0.5271432487822143
+batch_size = 1   -> [11]
+0.38665949243179026
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+12 -> 12 , best_next_ind= 11  best_Y_true= 0.502000  train_max= 0.512000  r2= 0.5218436303910374
+batch_size = 1   -> [70]
+0.39815806253469244
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=300,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+13 -> 13 , best_next_ind= 70  best_Y_true= 0.443000  train_max= 0.512000  r2= 0.5258671946426765
+batch_size = 1   -> [51]
+0.5390776304738103
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+14 -> 14 , best_next_ind= 51  best_Y_true= 0.463000  train_max= 0.512000  r2= 0.5005807232797105
+batch_size = 1   -> [394]
+-0.7599586071217528
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+15 -> 15 , best_next_ind= 394  best_Y_true= 0.012000  train_max= 0.512000  r2= 0.39924736061907673
+batch_size = 1   -> [134]
+-1.3384035512709629
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+16 -> 16 , best_next_ind= 134  best_Y_true= 0.365000  train_max= 0.512000  r2= 0.5451752246622364
+batch_size = 1   -> [3]
+0.4626087574204769
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+17 -> 17 , best_next_ind= 3  best_Y_true= 0.521000  train_max= 0.512000  r2= 0.6380125755378125
+batch_size = 1   -> [37]
+-0.23679652276688756
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+18 -> 18 , best_next_ind= 37  best_Y_true= 0.477000  train_max= 0.521000  r2= 0.6563398197589412
+batch_size = 1   -> [95]
+-0.11820496824561155
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=300,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+19 -> 19 , best_next_ind= 95  best_Y_true= 0.411000  train_max= 0.521000  r2= 0.6097756496165331
+batch_size = 1   -> [68]
+0.545275187855056
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.7,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+20 -> 20 , best_next_ind= 68  best_Y_true= 0.444000  train_max= 0.521000  r2= 0.5191923583103988
+batch_size = 1   -> [89]
+0.526991828772043
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+21 -> 21 , best_next_ind= 89  best_Y_true= 0.416000  train_max= 0.521000  r2= 0.6271176041295998
+batch_size = 1   -> [34]
+-1.390610075903574
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+22 -> 22 , best_next_ind= 34  best_Y_true= 0.479000  train_max= 0.521000  r2= 0.5803531822548538
+batch_size = 1   -> [24]
+0.43907708812165813
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+23 -> 23 , best_next_ind= 24  best_Y_true= 0.488000  train_max= 0.521000  r2= 0.47416362975761817
+batch_size = 1   -> [98]
+0.32045099057910414
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+24 -> 24 , best_next_ind= 98  best_Y_true= 0.406000  train_max= 0.521000  r2= 0.6161443493731189
+batch_size = 1   -> [5]
+0.5488356361857687
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+25 -> 25 , best_next_ind= 5  best_Y_true= 0.513000  train_max= 0.521000  r2= 0.4820890847400251
+batch_size = 1   -> [42]
+0.5131880500676098
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+26 -> 26 , best_next_ind= 42  best_Y_true= 0.475000  train_max= 0.521000  r2= 0.5998727875284724
+batch_size = 1   -> [118]
+0.3701283004701455
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.9,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+27 -> 27 , best_next_ind= 118  best_Y_true= 0.379000  train_max= 0.521000  r2= 0.5587916746871483
+batch_size = 1   -> [180]
+0.5296289586299066
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+28 -> 28 , best_next_ind= 180  best_Y_true= 0.285000  train_max= 0.521000  r2= 0.5797913267148067
+batch_size = 1   -> [76]
+0.55538384688962
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+29 -> 29 , best_next_ind= 76  best_Y_true= 0.437000  train_max= 0.521000  r2= 0.49771820542082124
+batch_size = 1   -> [58]
+0.5684370072066023
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=300,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+30 -> 30 , best_next_ind= 58  best_Y_true= 0.453000  train_max= 0.521000  r2= 0.5659891761727771
+batch_size = 1   -> [97]
+-0.7187823015232884
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+31 -> 31 , best_next_ind= 97  best_Y_true= 0.407000  train_max= 0.521000  r2= 0.6077294049305431
+batch_size = 1   -> [141]
+0.5114657042559856
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+32 -> 32 , best_next_ind= 141  best_Y_true= 0.355000  train_max= 0.521000  r2= 0.5896530204078966
+batch_size = 1   -> [17]
+0.44902368531479264
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.7,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+33 -> 33 , best_next_ind= 17  best_Y_true= 0.496000  train_max= 0.521000  r2= 0.6105992343911666
+batch_size = 1   -> [110]
+0.45771300648967794
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+34 -> 34 , best_next_ind= 110  best_Y_true= 0.391000  train_max= 0.521000  r2= 0.5067326353756871
+batch_size = 1   -> [114]
+-0.739446865182421
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+35 -> 35 , best_next_ind= 114  best_Y_true= 0.388000  train_max= 0.521000  r2= 0.5953886679864608
+batch_size = 1   -> [66]
+0.5941820878569171
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+36 -> 36 , best_next_ind= 66  best_Y_true= 0.445000  train_max= 0.521000  r2= 0.5622248131787453
+batch_size = 1   -> [56]
+0.4698220710618508
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.9,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+37 -> 37 , best_next_ind= 56  best_Y_true= 0.456000  train_max= 0.521000  r2= 0.5571771784267783
+batch_size = 1   -> [49]
+0.6138919165866189
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+38 -> 38 , best_next_ind= 49  best_Y_true= 0.465000  train_max= 0.521000  r2= 0.5703392470950592
+batch_size = 1   -> [29]
+0.5373240773137082
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=1, tree_method='exact')
+39 -> 39 , best_next_ind= 29  best_Y_true= 0.485000  train_max= 0.521000  r2= 0.4950121398589249
+batch_size = 1   -> [26]
+0.39772455594328365
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=300,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+40 -> 40 , best_next_ind= 26  best_Y_true= 0.486000  train_max= 0.521000  r2= 0.5554351886682436
+batch_size = 1   -> [21]
+0.41981182465527167
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+41 -> 41 , best_next_ind= 21  best_Y_true= 0.491000  train_max= 0.521000  r2= 0.5766572847085807
+batch_size = 1   -> [18]
+0.4076571276731738
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.7,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+42 -> 42 , best_next_ind= 18  best_Y_true= 0.496000  train_max= 0.521000  r2= 0.5591865794116885
+batch_size = 1   -> [32]
+0.57017667876089
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+43 -> 43 , best_next_ind= 32  best_Y_true= 0.481000  train_max= 0.521000  r2= 0.6219722136613164
+batch_size = 1   -> [62]
+0.40956878244538164
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+44 -> 44 , best_next_ind= 62  best_Y_true= 0.447000  train_max= 0.521000  r2= 0.5947268272115109
+batch_size = 1   -> [35]
+0.46024599659885435
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+45 -> 45 , best_next_ind= 35  best_Y_true= 0.478000  train_max= 0.521000  r2= 0.5980668560404943
+batch_size = 1   -> [2]
+0.09445461286883783
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=300,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+46 -> 46 , best_next_ind= 2  best_Y_true= 0.523000  train_max= 0.521000  r2= 0.5691051132465742
+batch_size = 1   -> [12]
+0.6210147457692751
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+47 -> 47 , best_next_ind= 12  best_Y_true= 0.501000  train_max= 0.523000  r2= 0.6171396491772071
+batch_size = 1   -> [27]
+0.24847610688590388
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+48 -> 48 , best_next_ind= 27  best_Y_true= 0.485000  train_max= 0.523000  r2= 0.6075003066496449
+batch_size = 1   -> [44]
+0.5255349194193163
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+49 -> 49 , best_next_ind= 44  best_Y_true= 0.469000  train_max= 0.523000  r2= 0.617111582893948
+batch_size = 1   -> [78]
+0.3991403616463742
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=300,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+50 -> 50 , best_next_ind= 78  best_Y_true= 0.432000  train_max= 0.523000  r2= 0.6049456803244811
+batch_size = 1   -> [4]
+0.6088440335648374
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+51 -> 51 , best_next_ind= 4  best_Y_true= 0.521000  train_max= 0.523000  r2= 0.5917253314399399
+batch_size = 1   -> [33]
+0.6854520993311305
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+52 -> 52 , best_next_ind= 33  best_Y_true= 0.481000  train_max= 0.523000  r2= 0.619393979066545
+batch_size = 1   -> [30]
+0.4786748302659303
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+53 -> 53 , best_next_ind= 30  best_Y_true= 0.482000  train_max= 0.523000  r2= 0.6004536868718428
+batch_size = 1   -> [19]
+0.5990711113242944
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.7,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=7, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+54 -> 54 , best_next_ind= 19  best_Y_true= 0.494000  train_max= 0.523000  r2= 0.6198153088338226
+batch_size = 1   -> [67]
+0.5609307086558231
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+55 -> 55 , best_next_ind= 67  best_Y_true= 0.444000  train_max= 0.523000  r2= 0.6149769009767009
+batch_size = 1   -> [73]
+0.4629177079754788
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+56 -> 56 , best_next_ind= 73  best_Y_true= 0.441000  train_max= 0.523000  r2= 0.5790134947458938
+batch_size = 1   -> [60]
+0.6082877916478943
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=11, min_child_weight=1, missing=None, n_estimators=500,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.7, tree_method='exact')
+57 -> 57 , best_next_ind= 60  best_Y_true= 0.451000  train_max= 0.523000  r2= 0.5725890695822744
+batch_size = 1   -> [0]
+0.5893953685689755
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=0.5,
+       colsample_bytree=1, gamma=0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=1, missing=None, n_estimators=700,
+       n_jobs=4, nthread=None, objective='reg:linear', random_state=3,
+       reg_alpha=0, reg_lambda=0.1, scale_pos_weight=1, seed=3,
+       silent=True, subsample=0.4, tree_method='exact')
+58 -> 58 , best_next_ind= 0  best_Y_true= 0.528000  train_max= 0.523000  r2= 0.6018932681903078
+0  ->  78.0   time= 250.4786192973455
+Successfully saved : /home/yuhao001/projects/ML-guided-material-synthesis/results/PAM_1_2019_6_11_0.csv
+total =  4.174643654955758   hrs  >>-------saved

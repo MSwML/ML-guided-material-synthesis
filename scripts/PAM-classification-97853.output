@@ -1,0 +1,12 @@
+loading MoS2 dataset...
+Index(['Add NaCl', 'Distance of S outside Furnace (in cm)',
+       'Flat/Tilted_Face Down (Tilted)', 'Flow rate (sccm)',
+       'Reaction Temperature (°C)', 'Ramp time (min)', 'Reaction time (min)'],
+      dtype='object')
+183
+117
+Can percentage =  0.61
+end at loop  166   Nc =  186
+0  run time= 80.4449171145757 mins
+['n', 186, 186.0, 0.7982456140350878, 0.0, 1.0, 0.4694325625896454, 160.0, 0.1329479768786127, 0.14953271028037382]
+Successfully saved : /home/yuhao001/projects/ML-guided-material-synthesis/results/mos2_PAM_100times_2019_6_10.csv

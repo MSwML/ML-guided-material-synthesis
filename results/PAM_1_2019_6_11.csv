@@ -1,0 +1,2 @@
+num_experiments,mean_y_wo_init,std_y_wo_init,mean_y_w_init,std_y_w_init,mean_y_only_init,std_y_only_init,run_time
+72.0,0.43757692307692303,0.10541043338994305,0.39541666666666664,0.14895737179176838,0.2858,0.1853403895539232,242.95907535950343
