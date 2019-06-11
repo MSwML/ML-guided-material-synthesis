@@ -16,10 +16,7 @@ Nanyang Technological University.
 
 This repository contains the original models described in the paper "Machine learning-guided synthesis of advanced inorganic materials" (https://arxiv.org/abs/1905.03938). These models are those used for `MoS2 classification` task as well as `CQD regression` task.
 
-**Note**
 
-0. Re-implementations with **training code** and models from Facebook AI Research (FAIR): [blog](http://torch.ch/blog/2016/02/04/resnets.html), [code](https://github.com/facebook/fb.resnet.torch)
-0. Code of improved **1K-layer ResNets** with 4.62% test error on CIFAR-10 in our new arXiv paper: https://github.com/KaimingHe/resnet-1k-layers
 
 ### Citation
 
@@ -34,12 +31,12 @@ If you use these models in your research, please cite:
 
 ### Environment Setup
 
-0. python environment setup:
+0. Python environment setup:
 	```
 	python 3.6.6
 	jupyter==1.0.0
 	matplotlib==2.2.3
-	numpy==1.15.1
+	numpy==1.16.0
 	pandas==0.22.0
 	scikit-learn==0.20.3
 	scipy==1.1.0
@@ -47,6 +44,7 @@ If you use these models in your research, please cite:
 	shap==0.24.0
 	xgboost==0.80
 	```	
+
 
 0. In case of errors during setup, check out your installation of the following packages in Ubuntu or other Linux-based systems may help:
 	```
@@ -62,12 +60,28 @@ If you use these models in your research, please cite:
 
 0. Download all data files from [this link](https://entuedu-my.sharepoint.com/:f:/g/personal/yuhao001_e_ntu_edu_sg/EoOOorjtaEJBhZ6W-NIFPH4BcxM3yUAasf2C01Za2CewkQ) and put inside your local `data` folder. (See [Code](#code) below for more information.)
 
+0. For more detailed description of the dataset, please check out our [paper](#introduction).
+
 
 ### Code
-0. Curves on ImageNet (solid lines: 1-crop val error; dashed lines: training error):
-	![Training curves](https://cloud.githubusercontent.com/assets/11435359/13046277/e904c04c-d412-11e5-9260-efc5b8301e2f.jpg)
+0. Code structure:
+	- **scripts** 
+		-- run_ipynb.sh `: script to run all *.ipynb`
+	- **results** `: folder to store all results and generated figures`
+	- **utils** `: supporting functions`
+	- **data** `: download data before running code (see [Data](#code))`
+	- PAM_repeat1000times-\*\.py `: to repeat 1000 times of PAM with randomly selected initial training sets`
+	- PAM_guidedSynthesis-\*\.ipynb `: to run 1 run of PAM, and plot the figures`
+	- model_selection-\*\.ipynb `: to select best model with 10 repetitions of 10 X 10 cross validation; plus result interpretation`
+	- data_overview.ipynb `: to plot feature correlation of dataset, and compute other descriptive statistics`
+	- best_model_interpretation-\*\.ipynb `: to extract feature attribution values; and predict on generated input`	
+	
+	
+**Note**
+*File names end with `'-classification'` are for classification or MoS2 dataset, while those end with `'-regression'` are for regression or CQD dataset.*
 
-0. 1-crop validation error on ImageNet (center 224x224 crop from resized image with shorter side=256):
+
+0. To run 
 
 	model|top-1|top-5
 	:---:|:---:|:---:
@@ -76,12 +90,6 @@ If you use these models in your research, please cite:
 	ResNet-101|23.6%|7.1%
 	ResNet-152|23.0%|6.7%
 	
-0. 10-crop validation error on ImageNet (averaging softmax scores of 10 224x224 crops from resized image with shorter side=256), the same as those in the paper:
-
-	model|top-1|top-5
-	:---:|:---:|:---:
-	ResNet-50|22.9%|6.7%
-	ResNet-101|21.8%|6.1%
-	ResNet-152|21.4%|5.7%
+	![Training curves](https://cloud.githubusercontent.com/assets/11435359/13046277/e904c04c-d412-11e5-9260-efc5b8301e2f.jpg)
 	
 @ Yuhao Lu 2019
