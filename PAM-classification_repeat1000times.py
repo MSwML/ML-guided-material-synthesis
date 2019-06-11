@@ -62,15 +62,10 @@ X_df,Y_df = data_handler.load_XY()
 X = X_df.as_matrix()
 Y = Y_df.as_matrix()
 feature_list = X_df.columns
-print(feature_list)
 
 unique, counts = np.unique(Y, return_counts=True) #unique, counts = numpy.unique(a, return_counts=True)
 tot_can_count = counts[1]
 tot_cnot_count = counts[0]
-print(tot_can_count)
-print(tot_cnot_count)
-print('Can percentage = ',(tot_can_count)/counts.sum())
-
 
 # # Set up & construct initial dataset
 # cross validation settup
@@ -110,7 +105,7 @@ def generate_init_sets():
 
 # # PAM guided sythesis
 
-def PAM_classfication(verbose = True, save_csv = True, to_break=True):
+def PAM_classfication(verbose = False, save_csv = False, to_break=True, title = 'mos2_PAM_'):
     '''
         PAM of classification problem.
         
@@ -124,13 +119,14 @@ def PAM_classfication(verbose = True, save_csv = True, to_break=True):
     '''
     #critical point 
     Nc = 0
+    init_time = time.time()
 
     # setup initial sets
     init_sets = generate_init_sets()
     train_ind = init_sets['train_ind']
     test_ind = init_sets['test_ind']
     if(verbose):
-        print(train_ind)  
+        print('initial training set indexes',train_ind)  
         
     # Results store 
     init_train_size = len(train_ind)
@@ -194,31 +190,36 @@ def PAM_classfication(verbose = True, save_csv = True, to_break=True):
         train_ind = train_ind + [next_ind]      
         test_ind.remove(next_ind)
 
-    print('end at loop ',j, '  Nc = ',Nc)
     
-    saved_title = 'n'
+
+    
+    saved_title = '-'
     if(save_csv):
         results_df = pd.DataFrame(data=results_mat[0:j+1],columns=['sample_size','acc_ts','tpr_ts','tnr_ts','best_prob','pos_tr','type1_err','type2_err'])
-        saved_title = data_handler.save_csv(results_df,title='mos2_PAM_results_Nc_'+str(Nc))
-        
-    return [saved_title, Nc] +results_mat[j].tolist()
+        saved_title = data_handler.save_csv(results_df,title=title)
+    
+    run_time = (time.time() - init_time)/60
+
+    return [saved_title, Nc] +results_mat[j].tolist() + [run_time]
 
 
 # In[8]:
 
 outer_loop = 10
-nloop = 100
+inner_loop = 100
 
 for j in range(0,outer_loop):
-    res_mat = []
-    for i in range(0,nloop):
-        init_time = time.time()
-        arr = PAM_classfication(verbose = False, save_csv = False, to_break=True)
-        res_mat.append(arr)
-        print(j*nloop + i, ' run time=',str((time.time()-init_time)/60),'mins' )
-        print(arr)
 
-    results_df = pd.DataFrame(data= res_mat,columns=['file-name','Nc','sample_size','acc_ts','tpr_ts','tnr_ts','best_prob','pos_tr','type1_err','type2_err'])
-    data_handler.save_csv(results_df,title='mos2_PAM_100times_')
+    PAM_results = np.zeros((inner_loop,11))
+
+    for i in range(0,inner_loop):
+        loop_count = j*inner_loop + i      
+
+        PAM_results[i,:] = np.array(PAM_classfication(verbose = True, save_csv = True, to_break=True,title = 'mos2_PAM_'+str(loop_count)+'th_loop'))
+        print(str(loop_count),' -> ',str(PAM_results[i,0]),'  time=',PAM_results[i,10])
+
+    PAM_df = pd.DataFrame(data= PAM_results,columns=['file-name','Nc','sample_size','acc_ts','tpr_ts','tnr_ts','best_prob','pos_tr','type1_err','type2_err','run_time'])
+    data_handler.save_csv(PAM_df,title='mos2_PAM_'+str(inner_loop)+'times_')
+    print('total = ',str((np.sum(PAM_results[:,10])/60)),'  hrs  >>-------saved')
 
 

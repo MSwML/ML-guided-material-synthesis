@@ -57,7 +57,7 @@ def test(y_pred,y_true,end_ptr):
 # data handling
 X_df,Y_df = data_handler.load_XY(1)
 X = X_df.as_matrix()
-Y = Y_df.as_matrix()/100
+Y = Y_df.as_matrix() / 100
 
 
 # setup and construct initial training dataset
@@ -74,17 +74,19 @@ all_ind_wo_max.remove(0)
 
 
 # PAM guided synthesis
-def PAM_regression(save_csv= False, verbose=False, title='PAM_results_regression',batch=1):
+def PAM_regression(save_csv= False, verbose=False, to_break=True, title='PAM_results_regression',batch=1):
 
     ## start PAM guided synthesis...
     init_time = time.time()
+    Nc = 0
 
     #construct initial training set
     results_mat = np.zeros(((totalSamp-init_train_size),12))
 
-
     train_ind = random.sample(all_ind_wo_max, init_train_size)
     test_ind = [x for x in all_ind if x not in train_ind]
+    if(verbose):
+        print('initial training set indexes',train_ind)  
 
     # set up result storage to compute eval metrics, in the order of PAM
     #  ignore the initial training set, as it is not determined by PAM
@@ -154,51 +156,53 @@ def PAM_regression(save_csv= False, verbose=False, title='PAM_results_regression
         loop_count = loop_count +1
         j = j + batch
                      
-        if(verbose):
-            print('batch_size = '+str(batch), '  ->',str(next_ind))
-            print(gb_clf.best_score_)
-            print(gb_clf.best_estimator_)
-            
+        if(verbose):            
             print(loop_count,'->',j,', best_next_ind=',next_best_true_ind, ' best_Y_true=',"{0:.6f}".format(next_best_y_true),' train_max=',"{0:.6f}".format(last_max),' r2=',pred_metrics[0])
 
         train_ind = [*train_ind , *next_ind]   
         test_ind = [x for x in test_ind if x not in next_ind]
         
         ## critical point
-        if(next_best_y_true==Y_global_max):
-            break;
+        if(next_best_y_true==Y_global_max and Nc == 0):
+            Nc = j+init_train_size          
+            if(to_break):
+                break
 
 
-    results = pd.DataFrame(data=results_mat[0:j,:],columns=['sample_size','pred_ind','best_pred_result','y_true','r2','pearson','p_value','mse','r2_s','pearson_s','p_value_s','mse_s'])
-    
+    saved_title = '-'
     if(save_csv):
-        data_handler.save_csv(results,title=title)
+        results = pd.DataFrame(data=results_mat[0:j,:],columns=['sample_size','pred_ind','best_pred_result','y_true','r2','pearson','p_value','mse','r2_s','pearson_s','p_value_s','mse_s'])
+        saved_title = data_handler.save_csv(results,title=title)
         
-    
-    run_time = (time.time() - init_time)/60
 
-
-    num_experiments = j+init_train_size
+    # compute stats
     mean_y_wo_init =  np.mean(true_results[0:j])
     std_y_wo_init = np.std(true_results[0:j])
     
     mean_y_w_init = np.mean(Y[train_ind])
     std_y_w_init = np.std(Y[train_ind])
+
+    run_time = (time.time() - init_time)/60
     
-    return [num_experiments,mean_y_wo_init,std_y_wo_init,mean_y_w_init,std_y_w_init,mean_y_only_init,std_y_only_init, run_time]
+    return [saved_title, Nc,mean_y_wo_init,std_y_wo_init,mean_y_w_init,std_y_w_init,mean_y_only_init,std_y_only_init, run_time]
 
 
 outer_loop = 10
-n_loop = 100
+inner_loop = 100
 
-# save the results every 100 repetitions for backup
+# save the results some repetitions for backup
 for j in range(0,outer_loop):
-    PAM_results = np.zeros((n_loop,8))
-    for i in range(0,n_loop):        
-        PAM_results[i,:] = np.array(PAM_regression(save_csv= False, verbose=False, title='PAM_results_regression_'+str(i)))
-        print(str(i+j*n_loop),' -> ',str(PAM_results[i,0]),'  time=',PAM_results[i,7])
-    PAM_df = pd.DataFrame(data=PAM_results, columns=['num_experiments','mean_y_wo_init','std_y_wo_init','mean_y_w_init','std_y_w_init','mean_y_only_init','std_y_only_init', 'run_time'])
-    data_handler.save_csv(PAM_df,title='PAM_'+str(n_loop)+'_')
-    print('total = ',str((np.sum(PAM_results[:,7])/60)),'  hrs  >>-------saved')
+
+    PAM_results = np.zeros((inner_loop,9))
+
+    for i in range(0,inner_loop): 
+
+        loop_count = j*inner_loop + i        
+        PAM_results[i,:] = np.array(PAM_regression(save_csv= True, verbose=True, title='cqd_PAM_'+str(loop_count)+'th_loop_'))
+        print(str(loop_count),' -> ',str(PAM_results[i,0]),'  time=',PAM_results[i,8])
+   
+
+    PAM_df = pd.DataFrame(data=PAM_results, columns=['file-name','num_experiments','mean_y_wo_init','std_y_wo_init','mean_y_w_init','std_y_w_init','mean_y_only_init','std_y_only_init', 'run_time'])
+    saved_path = data_handler.save_csv(PAM_df,title='cqd_PAM_'+str(inner_loop)+'times_')
+    print('total = ',str((np.sum(PAM_results[:,8])/60)),'  hrs  >>-------saved')
     
-print('total = ',str((np.sum(PAM_results[:,7])/60)),'  hrs  >>-------saved')
