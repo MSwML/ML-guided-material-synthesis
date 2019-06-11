@@ -33,7 +33,7 @@ If you use these models in your research, please cite:
 
 0. Python environment setup:
 	```
-	python 3.6.6
+	**python 3.6.6**
 	jupyter==1.0.0
 	matplotlib==2.2.3
 	numpy==1.16.0
