@@ -66,7 +66,7 @@ If you use these models in your research, please cite:
 ### Code
 0. Code structure:
 	- **scripts** 
-		- run_ipynb.sh `: script to run all *.ipynb`
+		- run_ipynb.sh `: script to run all *.ipynb. Setup up your directory in file.`
 	- **results** `: folder to store all results and generated figures`
 	- **utils** `: supporting functions`
 	- **data** `: download data before running code (see [Data](#code))`
