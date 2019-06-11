@@ -70,7 +70,7 @@ If you use these models in your research, please cite:
 	- **results** `: folder to store all results and generated figures`
 	- **utils** `: supporting functions`
 	- **data** `: download data before running code (see [Data](#code))`
-	- PAM_repeat1000times-\*\.py `: to repeat 1000 times of PAM with randomly selected initial training sets`
+	- PAM_repeat1000times-\*\.py `: to repeat 1000 times of PAM with randomly selected initial training sets. Please take note that it takes considerable computational time to finish running all 1000 times.E.g It may takes around 1 hr to run 1 time of PAM for classification.`
 	- PAM_guidedSynthesis-\*\.ipynb `: to run 1 run of PAM, and plot the figures`
 	- model_selection-\*\.ipynb `: to select best model with 10 repetitions of 10 X 10 cross validation; plus result interpretation`
 	- data_overview.ipynb `: to plot feature correlation of dataset, and compute other descriptive statistics`
