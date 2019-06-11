@@ -60,7 +60,7 @@ If you use these models in your research, please cite:
 	
 ### Data
 
-0. Download all data files from [this link](https://entuedu-my.sharepoint.com/:f:/g/personal/yuhao001_e_ntu_edu_sg/EoOOorjtaEJBhZ6W-NIFPH4BcxM3yUAasf2C01Za2CewkQ) and put inside your local `data` folder. (Check out the [Code](#code) part for more information.)
+0. Download all data files from [this link](https://entuedu-my.sharepoint.com/:f:/g/personal/yuhao001_e_ntu_edu_sg/EoOOorjtaEJBhZ6W-NIFPH4BcxM3yUAasf2C01Za2CewkQ) and put inside your local `data` folder. (See [Code](#code) below for more information.)
 
 
 ### Code
