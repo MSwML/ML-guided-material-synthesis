@@ -8,12 +8,13 @@ Nanyang Technological University.
 0. [Introduction](#introduction)
 0. [Citation](#citation)
 0. [Environment setup](#environment-setup)
+0. [Data](#data)
 0. [Code](#code)
 
 
 ### Introduction
 
-This repository contains the original models (ResNet-50, ResNet-101, and ResNet-152) described in the paper "Deep Residual Learning for Image Recognition" (http://arxiv.org/abs/1512.03385). These models are those used in [ILSVRC] (http://image-net.org/challenges/LSVRC/2015/) and [COCO](http://mscoco.org/dataset/#detections-challenge2015) 2015 competitions, which won the 1st places in: ImageNet classification, ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.
+This repository contains the original models described in the paper "Machine learning-guided synthesis of advanced inorganic materials" (https://arxiv.org/abs/1905.03938). These models are those used for `MoS2 classification` task as well as `CQD regression` task.
 
 **Note**
 
@@ -57,18 +58,12 @@ If you use these models in your research, please cite:
     Or, upgrade your pip.	
 
 	
-### Models
+### Data
 
-0. Visualizations of network structures (tools from [ethereon](http://ethereon.github.io/netscope/quickstart.html)):
-	- [ResNet-50] (http://ethereon.github.io/netscope/#/gist/db945b393d40bfa26006)
-	- [ResNet-101] (http://ethereon.github.io/netscope/#/gist/b21e2aae116dc1ac7b50)
-	- [ResNet-152] (http://ethereon.github.io/netscope/#/gist/d38f3e6091952b45198b)
+0. Download all data files from [this link](https://entuedu-my.sharepoint.com/:f:/g/personal/yuhao001_e_ntu_edu_sg/EoOOorjtaEJBhZ6W-NIFPH4BcxM3yUAasf2C01Za2CewkQ) and put inside your local `data` folder. (See [Code](#code) below for more information.)
 
-0. Model files:
-	- ~~MSR download: [link] (http://research.microsoft.com/en-us/um/people/kahe/resnet/models.zip)~~
-	- OneDrive download: [link](https://onedrive.live.com/?authkey=%21AAFW2-FVoxeVRck&id=4006CBB8476FF777%2117887&cid=4006CBB8476FF777)
 
-### Results
+### Code
 0. Curves on ImageNet (solid lines: 1-crop val error; dashed lines: training error):
 	![Training curves](https://cloud.githubusercontent.com/assets/11435359/13046277/e904c04c-d412-11e5-9260-efc5b8301e2f.jpg)
 
@@ -89,24 +84,4 @@ If you use these models in your research, please cite:
 	ResNet-101|21.8%|6.1%
 	ResNet-152|21.4%|5.7%
 	
-### Third-party re-implementations
-
-Deep residual networks are very easy to implement and train. We recommend to see also the following third-party re-implementations and extensions:
-
-0. By Facebook AI Research (FAIR), with **training code in Torch and pre-trained ResNet-18/34/50/101 models for ImageNet**: [blog](http://torch.ch/blog/2016/02/04/resnets.html), [code](https://github.com/facebook/fb.resnet.torch)
-0. Torch, CIFAR-10, with ResNet-20 to ResNet-110, training code, and curves: [code](https://github.com/gcr/torch-residual-networks)
-0. Lasagne, CIFAR-10, with ResNet-32 and ResNet-56 and training code: [code](https://github.com/Lasagne/Recipes/tree/master/papers/deep_residual_learning)
-0. Neon, CIFAR-10, with pre-trained ResNet-32 to ResNet-110 models, training code, and curves: [code](https://github.com/apark263/cfmz)
-0. Torch, MNIST, 100 layers: [blog](https://deepmlblog.wordpress.com/2016/01/05/residual-networks-in-torch-mnist/), [code](https://github.com/arunpatala/residual.mnist)
-0. A winning entry in Kaggle's right whale recognition challenge: [blog](http://blog.kaggle.com/2016/02/04/noaa-right-whale-recognition-winners-interview-2nd-place-felix-lau/), [code](https://github.com/felixlaumon/kaggle-right-whale)
-0. Neon, Place2 (mini), 40 layers: [blog](http://www.nervanasys.com/using-neon-for-scene-recognition-mini-places2/), [code](https://github.com/hunterlang/mpmz/)
-0. MatConvNet, CIFAR-10, with ResNet-20 to ResNet-110, training code, and curves: [code](https://github.com/suhangpro/matresnet)
-0. TensorFlow, CIFAR-10, with ResNet-32,110,182 training code and curves:
-[code](https://github.com/ppwwyyxx/tensorpack/tree/master/examples/ResNet)
-0. MatConvNet, reproducing CIFAR-10 and ImageNet experiments (supporting official MatConvNet), training code and curves: [blog](https://zhanghang1989.github.io/ResNet/), [code](https://github.com/zhanghang1989/ResNet-Matconvnet)
-0. Keras, ResNet-50: [code](https://github.com/raghakot/keras-resnet)
-
-Converters:
-
-0. MatConvNet: [url](http://www.vlfeat.org/matconvnet/pretrained/#imagenet-ilsvrc-classification)
-0. TensorFlow: [url](https://github.com/ry/tensorflow-resnet)
+@ Yuhao Lu 2019
