@@ -1,5 +1,4 @@
-# Results and Scripts
-results/*
+# Results
 *.output
 
 # Byte-compiled / optimized / DLL files
