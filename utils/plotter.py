@@ -1,3 +1,4 @@
+import time
 import pandas as pd
 import numpy as np
 
@@ -181,7 +182,139 @@ def plot_ROC_curve(pipe, tuned_parameters, title = 'roc_curve', save_csv = True,
  
     
     
-def plot_learning_curve(title='',save_csv=True,scoring = 'roc_auc'):
+def plot_learning_curve_versus_tr_epoch(title='',ntrials=1, nfolds=10, save_csv=False,verbose=True, save_fig=False): 
+    X_df,Y_df = data_handler.load_XY()
+    X = X_df.values
+    Y = Y_df.values
+
+
+    _ylabel = 'Mean AUROC'
+    n_jobs=4
+
+    # cross validation settup
+    Ntrials = ntrials
+    outter_nsplit = nfolds
+    tot_count = Ntrials * outter_nsplit
+
+    # Results store
+    train_mat = np.zeros((tot_count,500))
+    test_mat = np.zeros((tot_count,500))
+
+
+
+    for i in range(Ntrials):
+        init_time = time.time()
+        print("trial = ",i)
+        train_index = []  
+        test_index = []  
+
+        outer_cv = StratifiedKFold(n_splits=outter_nsplit, shuffle=True, random_state=i)
+        for train_ind,test_ind in outer_cv.split(X,Y):
+            train_index.append(train_ind.tolist())
+            test_index.append(test_ind.tolist())
+
+
+        for j in range(outter_nsplit):#outter_nsplit
+            count = i * outter_nsplit + j
+            print(str(count), "  / ",str(tot_count))
+            X_train = X[train_index[j]]
+            Y_train = Y[train_index[j]]
+
+            X_test = X[test_index[j]]
+            Y_test = Y[test_index[j]]
+
+            eval_sets = [(X_train, Y_train), (X_test,Y_test)]
+
+            clf = XGBClassifier(objective="binary:logistic",min_child_weight=1,**{'tree_method':'exact'},silent=True,
+                                n_jobs=4,random_state=3,seed=3,
+                                    learning_rate=0.01,
+                                    colsample_bylevel=0.9,
+                                    colsample_bytree=0.9,
+                              n_estimators=500,
+                              gamma=0.8,
+                              max_depth =11, 
+                              reg_lambda = 0.8,
+                                   subsample=0.4)
+            clf.fit(X_train,Y_train, eval_metric=['auc'], eval_set = eval_sets, verbose=False)
+            results = clf.evals_result()
+            epochs = len(results['validation_0']['auc'])
+
+            # record results
+            train_mat[count] = results['validation_0']['auc']
+            test_mat[count] = results['validation_1']['auc']
+
+
+            if(verbose):
+                print('Iter: %d, epochs: %d'%(count, epochs))
+                print('training result: %.4f, testing result: %.4f'%(train_mat[count][499], test_mat[count][499]))
+
+
+   
+        print('total time: %.4f mins'% ((time.time()-init_time)/60))
+
+        
+    # Results store
+    epoch_lists=list(range(1,epochs+1))
+    train_results = pd.DataFrame(data=train_mat,columns=['epoch_'+str(i) for i in epoch_lists])
+    test_results = pd.DataFrame(data=test_mat,columns=['epoch_'+str(i) for i in epoch_lists])
+
+    if(save_csv):
+        data_handler.save_csv(train_results,title='mos2_learning_curve_train_raw')
+        data_handler.save_csv(test_results,title='mos2_learning_curve_test_raw')
+
+
+    print('end')
+
+    _ylim=(0.5, 1.01)
+    n_jobs=4
+    
+
+    # create learning curve values
+    train_scores_mean = np.mean(train_mat, axis=0)
+    train_scores_std = np.std(train_mat, axis=0)
+    test_scores_mean = np.mean(test_mat, axis=0)
+    test_scores_std = np.std(test_mat, axis=0)
+
+    tr_size_df = pd.Series(epoch_lists, name='training_epoch')
+    tr_sc_m_df = pd.Series(train_scores_mean, name='training_score_mean')
+    val_sc_m_df = pd.Series(test_scores_mean, name='val_score_mean')
+    tr_sc_std_df = pd.Series(train_scores_std, name='training_score_std')
+    val_sc_std_df = pd.Series(test_scores_std, name='val_score_std')
+
+    if(save_csv):
+        res = pd.concat([tr_size_df, tr_sc_m_df,val_sc_m_df,tr_sc_std_df,val_sc_std_df], axis=1)
+        data_handler.save_csv(data=res,title=title+'_learning_curve')
+
+    
+    # plotting
+    _ylim=(0.5, 1.01)
+
+    fig = plt.figure(figsize=(12,12/1.618))
+    ax1 = fig.add_subplot(111)
+
+    ax1.set_ylim(_ylim)
+    ax1.set_xlabel("Number of Training Epochs")
+    ax1.set_ylabel(_ylabel)
+    plt.grid(False)
+
+    ax1.plot(tr_size_df, tr_sc_m_df,  color="r", label="Training") #'o-',
+    ax1.plot(tr_size_df, val_sc_m_df,  color="b", label="Validation") #'^--',
+    # plot error bars
+    #ax1.errorbar(tr_size_df, tr_sc_m_df, yerr=tr_sc_std_df,color="r", )
+    #ax1.errorbar(tr_size_df, val_sc_m_df, yerr=val_sc_std_df)
+
+    plt.setp(ax1.spines.values(), color='black')
+    plt.legend(loc="lower right")
+
+    plt.show()
+    to_path = None
+    if save_fig:
+        to_path = data_handler.format_title(to_dir,title+'_learning_curve','.png')
+        fig.savefig(to_path,dpi=1000,bbox_inches="tight",pad_inches=0.1)
+    
+    return to_path    
+    
+def plot_learning_curve_versus_tr_set_size(title='',save_csv=True,scoring = 'roc_auc'):
     # Cross validation with 100 iterations to get smoother mean test and train
     # score curves, each time with 20% data randomly selected as a validation set
     X, Y = data_handler.load_XY()

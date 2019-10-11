@@ -167,8 +167,8 @@ def PAM_classfication(verbose = False, save_csv = False, to_break=True, title = 
 
 
         # calculate results
-        type1_err = fn_ts / (tot_can_count - init_can_count)
-        type2_err = (fp_ts + tr_zero_count - init_cnot_count) / (tot_cnot_count - init_cnot_count)              
+        type1_err = (fp_ts + tr_zero_count - init_cnot_count) / (tot_cnot_count - init_cnot_count)
+        type2_err = fn_ts / (tot_can_count - init_can_count)              
         results_mat[j,:] = np.array([tr_total_count] + result_list + [best_prob ,pos_tr, type1_err, type2_err])
         
         next_ind = test_ind[next_ind]
