@@ -142,13 +142,13 @@ def fake_input_generator(feature_list,task=0,  to_save = True):
     
     if(task==0):
         addNaCl = [0,1]
-        sdist = list_generator(0.5,3.5,0.5)
+        sdist = list_generator(0.2,3.7,0.5)
         #boatQuartz = [0,1]
         faceD_tiled = [0,1]
         flow1 = list_generator(10,250,10)
-        temp1 = list_generator(500,1000,25)
-        rampT = list_generator(10,20,1)
-        delay1 = list_generator(5,15,5)
+        temp1 = list_generator(500,975,25)
+        rampT = list_generator(10,21,1)
+        delay1 = list_generator(5,15,1)
         #pressure = [100]   
         
         tot = len(addNaCl)*len(sdist)*len(faceD_tiled)*len(flow1)*len(temp1)*len(rampT)*len(delay1);

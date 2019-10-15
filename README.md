@@ -58,7 +58,7 @@ If you use these models in your research, please cite:
 	
 ### Data
 
-0. Download all data files from [this link](https://entuedu-my.sharepoint.com/:f:/g/personal/yuhao001_e_ntu_edu_sg/EoOOorjtaEJBhZ6W-NIFPH4BcxM3yUAasf2C01Za2CewkQ) and put into your local `data` folder. (See [Code](#code) below for more information.)
+0. Before running **best_model_interpretation-\*\.ipynb**, use `utils.data_handler.fake_input_generator()` to generate the input conditions. Then move the generated **fake_input_\*\.csv** into `data` folder.
 
 0. For more detailed description of the dataset, please check out our [paper](#introduction).
 
